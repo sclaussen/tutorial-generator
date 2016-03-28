@@ -27,7 +27,7 @@ work in progress):
 <pre>
 $ cd geneg
 $ node geneg ../sample-source ../sample-target
-<pre>
+</pre>
 
 Now change into the target directory and you will see the files from
 the 00 directory (README.md in this case).  If you do a git log though
