@@ -1,0 +1,19 @@
+{
+  "name": "geneg",
+  "version": "1.0.0",
+  "description": "A Node.JS module for generating sample application tutorials",
+  "main": "geneg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sclaussen/geneg.git"
+  },
+  "author": "Shane Claussen (sclaussen@yahoo.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sclaussen/geneg/issues"
+  },
+  "homepage": "https://github.com/sclaussen/geneg#readme"
+}
