@@ -11,7 +11,7 @@ To use geneg:
 
 To push your finished sample tutorial to github:
 
-1. Create a repository in github
+1. Create a repository in github (e.g. `target-directory`)
 1. Change into your tareget directory and execute
    `git remote add origin https://github.com/sclaussen/target-directory.git`
 1. Push your finished target directory to github
