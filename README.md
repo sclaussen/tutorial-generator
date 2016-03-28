@@ -8,9 +8,14 @@ To use geneg:
 1. Create the first phase as 01/ and add any files required in that phase (other then the README.md).
 1. Create the rest of the phases in a similar fashion (e.g. 02/, 03/, ..., 10/, 11/, et al) adding files into these directories required for those phases.
 1. Run geneg providing the source directory and a target directory as parameters.
+
+To push your finished sample tutorial to github:
+
 1. Create a repository in github
-1. Change into your tareget directory and execute `git remote add origin https://github.com/sclaussen/foo.git`
-1. Push your finished target directory to github `git push -u origin master`
+1. Change into your tareget directory and execute
+   `git remote add origin https://github.com/sclaussen/target-directory.git`
+1. Push your finished target directory to github
+   `git push -u origin master`
 
 For example, here's a sample prep structure:
 
