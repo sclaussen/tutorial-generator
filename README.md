@@ -5,9 +5,12 @@ To use geneg:
 
 1. Create a prep directory to contain the various phases.
 1. Create a 00 directory and add a README.md there that will be used across all phases.
-1. Create the first phase as 01/ and add any files required in that state (other then the README.md).
-1. Create the rest of the states in a similar fashion (e.g. 02/, 03/, ..., 10/, 11/, et al).
+1. Create the first phase as 01/ and add any files required in that phase (other then the README.md).
+1. Create the rest of the phases in a similar fashion (e.g. 02/, 03/, ..., 10/, 11/, et al) adding files into these directories required for those phases.
 1. Run geneg providing the source directory and a target directory as parameters.
+1. Create a repository in github
+1. Change into your tareget directory and execute `git remote add origin https://github.com/sclaussen/foo.git`
+1. Push your finished target directory to github `git push -u origin master`
 
 For example, here's a sample prep structure:
 
