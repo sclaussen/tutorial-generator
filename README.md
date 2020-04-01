@@ -1,46 +1,38 @@
 This package is intended to be used to generate a sample tutorial that
 builds in phases.
 
-To use geneg:
+To use the tutorial generator:
 
-1. Create a prep directory to contain the various phases.
-1. Create a 00 directory and add a README.md there that will be used across all phases.
-1. Create the first phase as 01/ and add any files required in that phase (other then the README.md).
-1. Create the rest of the phases in a similar fashion (e.g. 02/, 03/, ..., 10/, 11/, et al) adding files into these directories required for those phases.
-1. Run geneg providing the source directory and a target directory as parameters.
-
-To push your finished sample tutorial to github:
-
-1. Create a repository in github (e.g. `target-directory`)
-1. Change into your tareget directory and execute
-   `git remote add origin https://github.com/sclaussen/target-directory.git`
-1. Push your finished target directory to github
-   `git push -u origin master`
+1. Create a prep directory (eg ./example/source) to contain the various phases of the tutorial.
+1. In the prep directory, create a subdirectory named 00 (eg ./example/source/00), and create a README.md there that contains the markdown tutorial.
+1. In the prep directory, create another subdirectory naemd 01 (eg ./example/source/01), and add any files required in that phase (other than the README.md).
+1. Create the rest of the phases in a similar fashion (e.g. ./02/, ./03/, ..., ./10/, ./11/, et al) adding files into these directories required for those phases.
+1. Run the tutorial generator providing the source directory and a target directory as parameters.  The target directory need not exist.
+1. When the generator is complete, a git repository will have been created in the target directory with multiple commits, one per each of the phase directories, and each tagged for easy access.
 
 For example, here's a sample prep structure:
 
 <pre>
-/sample-source/00/README.md
-/sample-source/01/file1
-/sample-source/02/file1 (modified from phase 01)
-/sample-source/02/file2
-/sample-source/03/file1 (modified from phase 02)
-/sample-source/03/file2 (modified from phase 02)
-/sample-source/03/file3
+./source/00/README.md
+./source/01/file1
+./source/02/file1 (modified from phase 01)
+./source/02/file2
+./source/03/file1 (modified from phase 02)
+./source/03/file2 (modified from phase 02)
+./source/03/file3
 </pre>
 
-Execute geneg (currently must be in the geneg package as this is a
-work in progress):
+Execute the tutorial generator:
 
 <pre>
-$ cd geneg
-$ node geneg ../sample-source ../sample-target
+$ cd tutorial-generator
+$ node index example/source example/target
 </pre>
 
 Now change into the target directory and you will see the files from
-the 00 directory (README.md in this case).  If you do a git log though
-you'll see commits for each phase of the tutorial each tagged with the
-phase number.
+the 00 directory (README.md in this case).  IMPORTANT: If you execute
+a git log though you'll see commits for each phase of the tutorial
+each tagged with the phase number.
 
 <pre>
 $ git log --pretty=format:%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d --decorate --date=short
@@ -51,8 +43,10 @@ c5d18e2  2016-03-28  Commit for step 03  [Shane Claussen]  (tag: 03)
 5d2ff83  2016-03-28  Commit for step 00  [Shane Claussen]  (tag: 00)
 </pre>
 
-In the README.md file you can now instruct readers to move between
-phases using:
+In the README.md file containing the tutorial, as you introduce new
+phases of your coding sample, you can now instruct readers to move
+between the phases by checking out each of the commits using a tag.
+For example:
 
 <pre>
 $ git checkout 01 -f

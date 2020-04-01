@@ -2,7 +2,7 @@
   "name": "geneg",
   "version": "1.0.0",
   "description": "A Node.JS module for generating sample application tutorials",
-  "main": "geneg.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/sclaussen/geneg/issues"
   },
-  "homepage": "https://github.com/sclaussen/geneg#readme"
+  "homepage": "https://github.com/sclaussen/geneg#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.3"
+  }
 }
